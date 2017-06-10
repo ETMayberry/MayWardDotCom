@@ -1,0 +1,409 @@
+/**
+ * File Name: responsive.css
+ */
+
+/**
+ *	-------------------------------------------------------------------------------
+ *	( 01 ) - Responsive Specifications
+ *	-------------------------------------------------------------------------------
+ *
+ *  This part contains the responsive modifications for small devices widths
+ *
+ *	------
+ *
+ *  It has the following code:
+ *
+ *	   |
+ *	   |-->  [ 01 ] - Width From 1200px to 0
+ *	   |-->  [ 02 ] - Width From 992px to 0
+ *	   |-->  [ 03 ] - Width From 768px to 0
+ *	   |-->  [ 04 ] - Width From 480px to 0
+ *	   |-->  [ 05 ] - Width From 320px to 0
+ *	   |-->  [ 06 ] - Height Form 768px to 0
+ *	   |-->  [ 05 ] - Height Form Maximmum to 768px
+ *	   |-->  [ 08 ] - Height Form Maximmum to 900px
+ *
+ */
+
+
+
+ /*  [ 01 ] - Width From 1200px to 0
+ ===================================== */
+ 
+
+@media (max-width: 1200px) {
+
+	/* Header */
+	#header {
+		text-align: left;
+
+		#header-wrap {
+
+		}
+
+		.logo-and-nav {
+			height: auto;
+			min-height: 75px;
+			overflow: hidden;
+			width: 100%;
+		}
+
+		.logo {
+
+		}
+	}
+
+	.header-btn {
+		margin-left: 20px;
+	}
+
+	.main-menu {
+		left: 0;
+		display: none;
+	}
+
+	#mobile-menu {
+
+		.mobile-menu {
+			text-align: left;
+		}
+	}
+
+	.mobile-menu-btn {
+		top: 27px;
+		display: inline-block;
+	}
+
+	#header-sticky,
+	#header-sticky-wrap {
+		height: auto;
+		min-height: 75px;
+	}
+
+} // < 1200px width
+
+
+
+ /*  [ 02 ] - Width From 992px to 0
+ ==================================== */ 
+
+@media (max-width: 992px) {
+
+	/* Slider */
+	.fullscreen {
+		height: auto !important;
+	}
+
+	.banner-slider {
+		height: 600px !important;
+	}
+
+	.banner-slider ul li {
+		// background-size: initial;
+	}
+
+	.banner-center-box {
+		padding: 60px 15px 100px;
+	}
+
+	.slide-content h1 {
+		font-size: 50px;
+		line-height: 65px;
+	}
+
+	/* About Us */
+	.box-preview-1 .box-img {
+		height: 230px;
+	}
+
+	/* Page Title */
+	#page-title {
+		text-align: center;
+
+		.breadcrumb {
+			position: initial;
+			margin-top: 20px;
+		}
+	}
+
+	/* Why Choose Us */
+	.why-choose-us {
+		.video-preview {
+			width: 100%;
+		}
+	}
+
+	/* Our Works */
+	.portfolio-single-preview {
+		height: 450px;
+	}
+
+	.ps-fixedwidth-intro .description {
+		margin-left: 0;
+		height: auto;
+		border-left: 1px solid #ebeef0;
+		border-top: none;
+
+		.project-close {
+			top: 0;
+		}
+	}
+
+	.portfolio-cta-bottom {
+		text-align: center;
+
+		.loadmore-pi {
+			position: initial;
+			margin-top: 25px;
+		}
+	}
+
+	/* Portfolio Single */
+	.portfolio-single-meta {
+		margin-bottom: 30px;
+	}
+
+	/* Google Map */
+	#map {
+		height: 420px;
+	}
+
+	/* Scroll Top */
+	.scroll-top {
+		display: none !important;
+	}
+
+
+} // < 992px width
+
+
+
+/*  [ 03 ] - Width From 768px to 0
+==================================== */
+
+@media (max-width: 768px) {
+
+	/* Header */
+	.header-contact-info + .header-social-icons {
+		margin-top: 0;
+	}
+
+	.header-social-icons {
+		float: none;
+		display: block;
+
+		span {
+			display: none;
+		}
+	}
+
+	/* Banner Slider */
+	.banner-slider {
+		// height: 480px !important;
+	}
+
+	.slide-content h1 {
+		font-size: 40px;
+		line-height: 55px;
+	}
+
+	/* About Us */
+	.box-preview-1 .box-img {
+		height: 180px;
+	}
+
+	.about-us-boxes-info {
+		margin: 80px 0 0;
+
+		.box-info-1 {
+			width: 100%;
+		}
+	}
+
+	/* CTA Title 1 */
+	.cta-title.title-1 .section-inner {
+		padding: 130px 0;
+	}
+
+	/* Our Services */
+	.our-services {
+		.img-preview {
+			height: 350px;
+		}
+	}
+
+	/* Our Team */
+	.our-team {
+		.box-img {
+			height: 320px;
+		}
+	}
+
+	/* CTA Title */
+	.cta-title h1 {
+		font-size: 40px;
+	}
+
+	/* Our Works */
+	.portfolio-single-preview {
+		height: 380px;
+	}
+
+	/* Mini Footer */
+	#footer-mini {
+
+	}
+
+	/* Footer Mini */
+	#footer-mini {
+		text-align: center;
+
+		.social-icons {
+			float: none !important;
+			margin-top: 15px;
+		}
+	}
+
+} // < 768px width
+
+
+
+/*  [ 04 ] - Width From 480px to 0
+==================================== */
+
+@media (max-width: 480px) {
+	/* Header */
+	.header-contact-info {
+		li {
+			margin-right: 15px;
+			display: block;
+		}
+
+		li + li {
+			margin: 10px 0 0 0 !important;
+		}
+	}
+
+	.header-btn {
+		display: none;
+	}
+
+	/* Banner Slider */
+	.banner-slider {
+		// height: 420px !important;
+	}
+
+	.slide-content h1 {
+		font-size: 30px;
+		line-height: 45px;
+	}
+
+	/* About Us */
+	.box-preview-1 .box-img {
+		height: 150px;
+	}
+
+	/* Our Services */
+	.our-services {
+		.img-preview {
+			height: 300px;
+		}
+	}
+
+	/* Popular Packages */
+	.cta-title {
+		.section-inner {
+			padding: 150px 0;
+		}
+
+		h1 {
+			font-size: 35px;
+		}
+	}
+
+	/* Our Works */
+	.portfolio-categories li {
+		display: block;
+	}
+
+	.portfolio-single-preview {
+		height: 320px;
+	}
+
+	/* Portfolio Single */
+	.portfolio-single-paging .prev,
+	.portfolio-single-paging .next {
+		width: 100%;
+	}
+
+	.portfolio-single-paging .next {
+		margin-top: 50px;
+	}
+
+	/* Google Map */
+	#map {
+		height: 380px;
+	}
+
+
+} // < 480px width
+
+
+
+/*  [ 05 ] - Width From 320px to 0
+==================================== */
+
+@media (max-width: 320px) {
+
+	/* CTA Title */
+	.cta-title {
+		.section-inner {
+			padding: 120px 0;
+		}
+
+		h1 {
+			font-size: 30px;
+		}
+	}
+
+	/* Our Works */
+	.portfolio-single-preview {
+		height: 280px;
+	}
+
+} // < 320px width
+
+
+
+/*  [ 06 ] - Height From 768px to 0
+===================================== */
+
+@media (max-height : 768px) {
+
+
+
+} // < 768px height
+
+
+
+/*  [ 07 ] - Height From Maximmum to 768px
+============================================ */
+
+@media (min-height : 768px) {
+
+
+
+} // > 768px height
+
+
+
+/*  [ 08 ] - Height From Maximmum to 900px
+============================================ */
+
+@media (min-height : 900px) {
+
+
+} // > 900px height
+
+
+
