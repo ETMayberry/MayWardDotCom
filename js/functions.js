@@ -198,19 +198,6 @@ $("[class*='anim-']").each(function(a){var b=$(this).offset().top,c=$(this).offs
 }
 
 
-// *** RTL Case *** //
-var HTMLDir = $( "html" ).css( "direction" ),
-	owlRtl;
-
-// If page is RTL
-if ( HTMLDir == "rtl" ) { 
-	// Owl Carousel
-	owlRtl = true 
-} else { 
-	owlRtl = false 
-}
-
-
 // *** Website Loading *** //
 function websiteLoading() {
 	$( "#website-loading" ).find( ".loader" ).delay( 0 ).fadeOut( 500 );
@@ -372,7 +359,27 @@ function onePageNav() {
         	$( "#mobile-menu, .mobile-menu-sticky" ).slideUp( 250 );
         	$( ".mobile-menu-btn" ).removeClass( "is-active" );
         }
-    });    
+    });
+	
+
+    $(  ".smooth-scroll" ).on(  "click", function( e ) {
+        e.preventDefault();
+        var $anchor = $(this);        
+		console.log('test');
+        $(  "html, body" ).stop().animate({
+            scrollTop: $($anchor.attr('href')).offset().top - offsetDifference
+        }, 1200, 'easeInOutExpo');
+
+        var classCases = $body.hasClass( "device-md" ) 
+        				 || $body.hasClass( "device-sm" ) 
+        				 || $body.hasClass( "device-xs" ) 
+        				 || $body.hasClass( "device-xxs" );
+
+        if ( classCases ) {
+        	$( "#mobile-menu, .mobile-menu-sticky" ).slideUp( 250 );
+        	$( ".mobile-menu-btn" ).removeClass( "is-active" );
+        }
+    });  
 }
 
 
@@ -407,7 +414,6 @@ function bannerSlider() {
 	var bannerSlider = $( ".banner-slider > .owl-carousel" );
 	bannerSlider.owlCarousel({
 		items: 1,
-		rtl: owlRtl,
 		autoplay: true,
 		autoplaySpeed: 800, // Sliding autoplay speed
 		autoplayTimeout: 4000, // Autoplay interval timeout.
@@ -569,7 +575,6 @@ function portfolioSingleSlider() {
 	var portfolioSingleSlider = $( ".portfolio-single-slider > .owl-carousel" );
 	portfolioSingleSlider.owlCarousel({
 		items: 1,
-		rtl: owlRtl,
 		autoplay: true,
 		autoplaySpeed: 500, // Sliding autoplay speed
 		autoplayTimeout: 3000, // Autoplay interval timeout.
@@ -682,7 +687,6 @@ function featuredProjectsSlider() {
 	var featuredProjectsSlider = $( ".featured-projects-slider > .owl-carousel" );
 	featuredProjectsSlider.owlCarousel({
 		// items: 3,
-		rtl: owlRtl,
 		autoplay: false,
 		autoplaySpeed: 500, // Sliding autoplay speed
 		autoplayTimeout: 3000, // Autoplay interval timeout.
@@ -732,7 +736,6 @@ function teamSlider() {
 	var teamSlider = $( ".team-slider > .owl-carousel" );
 	teamSlider.owlCarousel({
 		// items: 3,
-		rtl: owlRtl,
 		autoplay: false,
 		autoplaySpeed: 500, // Sliding autoplay speed
 		autoplayTimeout: 3000, // Autoplay interval timeout.
@@ -782,7 +785,6 @@ function testmonialsSlider() {
 	var testmonialsSlider = $( ".testmonials-slider > .owl-carousel" );
 	testmonialsSlider.owlCarousel({
 		// items: 3,
-		rtl: owlRtl,
 		autoplay: false,
 		autoplaySpeed: 500, // Sliding autoplay speed
 		autoplayTimeout: 3000, // Autoplay interval timeout.
@@ -832,7 +834,6 @@ function clientsSlider() {
 	var clientsSlider = $( ".clients-slider > .owl-carousel" );
 	clientsSlider.owlCarousel({
 		items: 5,
-		rtl: owlRtl,
 		autoplay: 4000,
 		autoplaySpeed: 500, // Sliding autoplay speed
 		autoplayTimeout: 3000, // Autoplay interval timeout.

@@ -3,7 +3,7 @@ $name = $_POST["cfName"];
 $email = $_POST["cfEmail"];
 $message = $_POST["cfMessage"];
  
-$EmailTo = "moradxd@gmail.com";
+$EmailTo = "eric@mayward.com";
 $Subject = "Bright - Startup Landing Page";
  
 // prepare email body text

@@ -4282,12 +4282,6 @@ Copyright (c) 2015 Daniel Eden
   cursor: move;
   cursor: grab; }
 
-.owl-carousel.owl-rtl {
-  direction: rtl; }
-
-.owl-carousel.owl-rtl .owl-item {
-  float: right; }
-
 /* No Js */
 .no-js .owl-carousel {
   display: block; }
